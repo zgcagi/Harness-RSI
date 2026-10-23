@@ -12,7 +12,7 @@ BADGE = {'C': '✅', 'O': '◐', 'N': '—', 'X': 'n/a'}
 
 
 def load_evidence():
-    data = json.loads((ROOT / 'data/reported-evidence.json').read_text())
+    data = json.loads((ROOT / 'data/reported-evidence.json').read_text(encoding="utf-8"))
     methods = data['methods']
     assert len({r['key'] for r in methods}) == len(methods), 'Duplicate method key'
     for row in methods:
@@ -143,7 +143,7 @@ def main():
     for lang,path in [('en','README.md'),('zh','README_zh.md')]:
         target=ROOT/path
         replacement='<!-- evidence-summary:start -->\n\n'+summary(data,scored,per,joint,lang=='zh')+'\n\n<!-- evidence-summary:end -->'
-        text,count=re.subn(r'<!-- evidence-summary:start -->.*?<!-- evidence-summary:end -->',lambda _:replacement,target.read_text(),flags=re.S)
+        text,count=re.subn(r'<!-- evidence-summary:start -->.*?<!-- evidence-summary:end -->',lambda _:replacement,target.read_text(encoding="utf-8"),flags=re.S)
         assert count==1,path
         expected[target]=text
     target = ROOT / 'index.html'
@@ -155,15 +155,15 @@ def main():
     )
     text, count = re.subn(
         r'(<p class="sec-sub" id="evidence-population">).*?(</p>)',
-        lambda match: match[1] + population + match[2], target.read_text(), flags=re.S,
+        lambda match: match[1] + population + match[2], target.read_text(encoding="utf-8"), flags=re.S,
     )
     assert count == 1, 'index.html: missing or duplicate evidence population'
     expected[target] = text
-    stale=[str(p.relative_to(ROOT)) for p,text in expected.items() if not p.exists() or p.read_text()!=text]
+    stale=[str(p.relative_to(ROOT)) for p,text in expected.items() if not p.exists() or p.read_text(encoding="utf-8")!=text]
     if args.check:
         if stale:raise SystemExit('Evidence artifacts are stale: '+', '.join(stale))
     else:
-        for path,text in expected.items():path.write_text(text)
+        for path,text in expected.items():path.write_text(text, encoding="utf-8")
     print(f'Evidence: {len(data["methods"])} methods, {len(scored)} scored; '+('checked' if args.check else 'generated'))
 
 if __name__=='__main__':
