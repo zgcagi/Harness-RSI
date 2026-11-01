@@ -1,4 +1,8 @@
-# Manuscript synchronization — 17 October 2026
+# Manuscript synchronization
+
+Latest update: [1 November 2026](#compositional-safety-update--1-november-2026). Earlier revisions are retained below for provenance.
+
+## Initial synchronization — 17 October 2026
 
 The full report and short paper are separate source projects. Their current sources were synchronized from Overleaf; the public OpenReview and arXiv URLs remain the publication links and are not assumed to serve these exact builds.
 
@@ -37,3 +41,16 @@ Added [Harness-Zero](https://arxiv.org/abs/2609.24974) to the full report's Mode
 | [Short paper](../paper/self-evolving-agent-harness.pdf) | `ff66a471e3f0fe07c9e35bd0c0147fd74af7a8e8` | 18 pages, 86 bibliography entries |
 
 Both distributed PDFs and bibliography files now match these source revisions; this supersedes the 18 October PDF provenance caveat. Builds resolve all citations and references without overfull boxes. The new paragraphs and bibliography entries were visually inspected. Existing full-report font substitution and caption/hypcap warnings remain. Overleaf cloud compilation has not been verified. No audit entries or verdicts were changed, and arXiv has not been updated.
+
+## Compositional safety update — 1 November 2026
+
+Added [Compositional Safety Failures in Harness Evolution](https://arxiv.org/abs/2609.33123) to the short paper's §6.5 Safety Boundaries for Self-Modifying Systems and the full report's §8.4 Privacy, Security, and Systemic Stability. The short paper cites runtime monitoring and its coverage limits; the full report adds the observed pairwise and irreducible three-way failures. The bilingual READMEs and project page now summarize this connection. The taxonomy image was regenerated to keep its citation numbers aligned with the updated bibliography.
+
+| Artifact | Source commit | Local verification build |
+|---|---|---|
+| [Full report](../paper/harness-self-evolution.pdf) | `10c71251f211457a7d6ea2d5c19c7f6f3501191d` | 66 pages, 264 bibliography entries |
+| [Short paper](../paper/self-evolving-agent-harness.pdf) | `cc57cd278cf6962a18fa88b96d7500c6095c3c02` | 18 pages, 87 bibliography entries |
+
+Both source commits were pushed to Overleaf and verified against its remote main branches. Distributed PDFs and bibliographies are copied from the same locally verified revisions. Both PDFs compile without unresolved references or overfull boxes, retain their page counts, and have been visually checked at the changed passages and bibliography entries. Existing full-report font substitution and caption/hypcap warnings remain; Overleaf cloud compilation and external publication PDFs have not been updated or verified by this synchronization.
+
+This targeted citation update adds no audit verdicts and changes neither the 95-method scope nor the 93 scored comparisons. The audit date remains 10 October 2026 and the literature cutoff remains 8 October 2026.
