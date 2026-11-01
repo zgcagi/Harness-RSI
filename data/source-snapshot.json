@@ -1,6 +1,6 @@
 {
   "date": "2026-11-01",
-  "description": "Both Overleaf manuscript revisions include the compositional-safety reference. Distributed PDFs and bibliographies match the recorded source commits; companion discussion and snapshot dates are synchronized. The primary-method audit and its literature cutoff are unchanged.",
+  "description": "Both Overleaf manuscript revisions include the compositional-safety reference. Distributed PDFs and bibliographies match the recorded source commits; the reading list and snapshot dates are synchronized. The primary-method audit and its literature cutoff are unchanged.",
   "sha256": {
     "00README.json": "a37c4aec3b2991f6f18573df5207929066dff6250deb991ffa8130ebd759d1cb",
     "assets/logo-zgca-ustc.pdf": "3ca78b87e368c8b596ba5aa4fc5444c0557a9cc6df550339cbfe44ea9b63f92d",

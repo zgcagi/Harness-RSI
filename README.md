@@ -20,8 +20,6 @@ Companion materials for our survey of how execution experience becomes persisten
 
 **PDF downloads:** [Full report · 66 pages](paper/harness-self-evolution.pdf) · [Short paper · 18 pages](paper/self-evolving-agent-harness.pdf).
 
-Updated 1 November 2026: both PDFs include the compositional-safety reference. [Revision details](docs/manuscript-sync.md#compositional-safety-update--1-november-2026).
-
 ## Reading Guide
 
 **Background**　[Related Surveys](#related-surveys) · [Definition](#definition) · [Taxonomy](#taxonomy) · [Precursors](#precursors)
@@ -395,6 +393,7 @@ The Improvement criterion records how reporting tasks relate to those that forme
 - **Scaffold Effect** `arXiv'26` — treats harness choice as a hidden variable in coding-agent comparisons. [[paper]](https://arxiv.org/abs/2607.22585)
 - **Rethinking Harness Evaluation** `arXiv'26` — examines protocol confounds in reported harness-evolution gains. [[paper]](https://arxiv.org/abs/2607.12227)
 - **Model–Harness Fit** `arXiv'26` — compares model–harness combinations across agent tasks to identify interaction effects. [[paper]](https://arxiv.org/abs/2610.00917)
+- **Compositional Safety Failures** `arXiv'26` — compares individual and combined component updates to identify safety failures, with hypergraph-guided runtime monitoring. [[paper]](https://arxiv.org/abs/2609.33123)
 
 #### Generalization & Retention
 
@@ -496,8 +495,6 @@ The survey examines personal assistance and developer workspaces, enterprise aut
 Persistent and shareable artifacts also affect work and learning, control over accumulated knowledge, privacy, security, and institutional accountability. Open questions include model–harness–environment co-evolution, optimization over heterogeneous artifacts, compositional program contracts, reusable state, dynamic evaluation, and authorization boundaries. See the [application map](assets/applications.png) and [societal-impact map](assets/social-impact.png), with the full discussion in Sections 7–9 of the [paper](paper/harness-self-evolution.pdf).
 
 Examples include runtime capability bindings in [DSH Everything](https://github.com/yshenaw/dsh-everything/tree/dade643bb09c49d290340ee01f3a00dd20bf37fb), clinically prioritized tool admission in [MedRSI](https://arxiv.org/abs/2609.24838), and practice-environment design in [EnvHarness](https://arxiv.org/abs/2608.19880).
-
-[Compositional Safety Failures in Harness Evolution](https://arxiv.org/abs/2609.33123) identifies 43 pairwise and 18 irreducible three-way failures among updates that individually pass safety and utility checks. Its hypergraph-guided runtime monitor checks activated interactions before actions take effect, reducing observed violations while leaving coverage of unseen interactions unresolved.
 
 The short paper presents cases on model–harness pairing, plugin reuse, and distributed execution.
 

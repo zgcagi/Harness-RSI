@@ -2400,6 +2400,21 @@ window.CORPUS = {
    "verdict": ""
   },
   {
+   "name": "Compositional Safety Failures",
+   "venue": "arXiv'26",
+   "desc": "compares individual and combined component updates to identify safety failures, with hypergraph-guided runtime monitoring.",
+   "links": [
+    [
+     "paper",
+     "https://arxiv.org/abs/2609.33123"
+    ]
+   ],
+   "group": "evaluation",
+   "sub": "Claim-Specific Evidence",
+   "node": "Attribution Controls",
+   "verdict": ""
+  },
+  {
    "name": "HarnessDev",
    "venue": "arXiv'26",
    "desc": "separates harness <em>creation</em> from iterative <em>evolution</em>, reporting capability, cost, and held-out transfer.",

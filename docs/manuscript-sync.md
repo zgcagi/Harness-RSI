@@ -44,7 +44,7 @@ Both distributed PDFs and bibliography files now match these source revisions; t
 
 ## Compositional safety update — 1 November 2026
 
-Added [Compositional Safety Failures in Harness Evolution](https://arxiv.org/abs/2609.33123) to the short paper's §6.5 Safety Boundaries for Self-Modifying Systems and the full report's §8.4 Privacy, Security, and Systemic Stability. The short paper cites runtime monitoring and its coverage limits; the full report adds the observed pairwise and irreducible three-way failures. The bilingual READMEs and project page now summarize this connection. The taxonomy image was regenerated to keep its citation numbers aligned with the updated bibliography.
+Added [Compositional Safety Failures in Harness Evolution](https://arxiv.org/abs/2609.33123) to the short paper's §6.5 Safety Boundaries for Self-Modifying Systems and the full report's §8.4 Privacy, Security, and Systemic Stability. The short paper cites runtime monitoring and its coverage limits; the full report adds the observed pairwise and irreducible three-way failures. The bilingual reading lists and website explorer include the work as a regular entry under Attribution Controls. The taxonomy image was regenerated to keep its citation numbers aligned with the updated bibliography.
 
 | Artifact | Source commit | Local verification build |
 |---|---|---|

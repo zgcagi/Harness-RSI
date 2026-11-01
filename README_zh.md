@@ -22,8 +22,6 @@
 
 **PDF 下载：**[完整报告 · 66 页](paper/harness-self-evolution.pdf) · [短版论文 · 18 页](paper/self-evolving-agent-harness.pdf)。
 
-2026 年 11 月 1 日更新：两份 PDF 均已加入组合安全文献引用。[修订记录](docs/manuscript-sync.md#compositional-safety-update--1-november-2026)。
-
 ## 阅读导航
 
 **背景**　[相关综述](#related-surveys) · [定义](#definition) · [分类](#taxonomy) · [前置工作](#precursors)
@@ -397,6 +395,7 @@ Improvement 标准记录报告任务与产生更新的任务之间的关系；Se
 - **Scaffold Effect** `arXiv'26`：把 harness 选择当作编码 agent 比较中的一个隐藏变量。 [[paper]](https://arxiv.org/abs/2607.22585)
 - **Rethinking Harness Evaluation** `arXiv'26`：分析报告 harness 演化收益时的评测协议混杂因素。 [[paper]](https://arxiv.org/abs/2607.12227)
 - **Model–Harness Fit** `arXiv'26`：跨 agent 任务比较 model–harness 组合，分析二者的交互效应。 [[paper]](https://arxiv.org/abs/2610.00917)
+- **Compositional Safety Failures** `arXiv'26`：对照单项与组合更新识别安全失败，并提出 hypergraph-guided runtime monitoring。 [[paper]](https://arxiv.org/abs/2609.33123)
 
 #### 泛化与能力保留
 
@@ -498,8 +497,6 @@ Improvement 标准记录报告任务与产生更新的任务之间的关系；Se
 持久、可共享的产物也会影响工作与学习、累积知识的控制权、隐私、安全和机构责任。开放问题包括模型、harness 与环境共同演化，异构产物的优化与可组合程序契约、可复用状态、动态评测和授权边界。参见[应用图](assets/applications.png)、[社会影响图](assets/social-impact.png)，以及[论文](paper/harness-self-evolution.pdf)第 7–9 节的完整讨论。
 
 相关案例包括 [DSH Everything](https://github.com/yshenaw/dsh-everything/tree/dade643bb09c49d290340ee01f3a00dd20bf37fb) 的运行时能力绑定、[MedRSI](https://arxiv.org/abs/2609.24838) 的临床后果导向工具准入，以及 [EnvHarness](https://arxiv.org/abs/2608.19880) 的练习环境设计。
-
-[Compositional Safety Failures in Harness Evolution](https://arxiv.org/abs/2609.33123) 在单项更新通过安全与效用检查的条件下，识别出 43 个两两组合失败和 18 个不可约三元组合失败。其 hypergraph-guided runtime monitor 在动作生效前检查已激活的交互，减少了实验中的违规，但对未发现交互的覆盖仍待解决。
 
 短版论文结合案例讨论模型与 harness 配对、插件复用和分布式执行。
 

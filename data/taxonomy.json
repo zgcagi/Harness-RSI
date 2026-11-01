@@ -828,6 +828,13 @@
   {
     "branch": "Evaluation & Benchmarks",
     "sub": "Claim-Specific Evidence",
+    "mechanism": "Attribution Controls",
+    "name": "Compositional Safety Failures",
+    "key": "zhang2026compositional"
+  },
+  {
+    "branch": "Evaluation & Benchmarks",
+    "sub": "Claim-Specific Evidence",
     "mechanism": "Generalization & Retention",
     "name": "HarnessDev",
     "key": "wu2026harnessdev"
