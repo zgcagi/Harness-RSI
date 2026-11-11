@@ -288,6 +288,7 @@ Self-evolution 指持续更新 harness 状态的过程；self-improvement 指通
 - **DeepSeek Harness** `产品'26`：基于 Cordis 提供依赖声明、检查点与回放能力；产品页未报告 self-evolution 的实证评测。 [[page]](https://www.deepseek.com/harness/en/)
 - **Autogenesis** `arXiv'26`：自演化 agent 协议，带显式的提出、评估、提交周期，以及谱系与版本记录。 [[paper]](https://arxiv.org/abs/2604.15034) [[code]](https://github.com/DVampire/Autogenesis)
 - **ModularRSI** `arXiv'26`：在固定 composer 后演化模块，通过不读取奖励的准入检查筛选更新，任务由外部整理。 [[paper]](https://arxiv.org/abs/2609.14857)
+- **PluginRSI** `arXiv'26`：在平衡 minibatch 上独立变异单个 plugin，将有效变体保留至共享 plugin library，并跨轮次重组 workflow。 [[paper]](https://arxiv.org/abs/2609.32423)
 - **Cordis / Spatiotemporal Composability** `arXiv'26`：该内核背后的形式演算，自演化 harness 被列为未来工作。 [[paper]](https://arxiv.org/abs/2608.25512)
 
 <a id="theory"></a>
@@ -478,7 +479,7 @@ Improvement 标准记录报告任务与产生更新的任务之间的关系；Se
 
 <!-- evidence-summary:start -->
 
-四项 claims 的证据分布，依据 93 份报告各自的主要比较；另有 2 个方法未报告实证评测。
+四项 claims 的证据分布，依据 94 份报告各自的主要比较；另有 2 个方法未报告实证评测。
 
 [![四项 claims 的证据分布与整体覆盖情况](assets/reported-evidence.png)](assets/reported-evidence.png)
 

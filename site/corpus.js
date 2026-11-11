@@ -2,30 +2,30 @@
 // Do not edit by hand; rerun the script after changing either file.
 window.CORPUS = {
  "evidence": {
-  "total": 95,
-  "scored": 93,
+  "total": 96,
+  "scored": 94,
   "claims": [
    {
     "name": "Selection",
-    "C": 43,
+    "C": 44,
     "O": 16,
     "N": 34
    },
    {
     "name": "Activation",
     "C": 8,
-    "O": 85,
+    "O": 86,
     "N": 0
    },
    {
     "name": "Attribution",
     "C": 10,
-    "O": 82,
+    "O": 83,
     "N": 1
    },
    {
     "name": "Improvement",
-    "C": 53,
+    "C": 54,
     "O": 18,
     "N": 22
    }
@@ -33,7 +33,7 @@ window.CORPUS = {
   "joint": [
    26,
    27,
-   33,
+   34,
    7,
    0
   ]
@@ -1753,6 +1753,21 @@ window.CORPUS = {
     [
      "paper",
      "https://arxiv.org/abs/2609.14857"
+    ]
+   ],
+   "group": "executable",
+   "sub": "Everything Is a Plugin",
+   "node": "Microkernel Platforms",
+   "verdict": "COOC"
+  },
+  {
+   "name": "PluginRSI",
+   "venue": "arXiv'26",
+   "desc": "mutates individual plugins on balanced minibatches, retains improving variants in a shared plugin library, and recomposes workflows across iterations.",
+   "links": [
+    [
+     "paper",
+     "https://arxiv.org/abs/2609.32423"
     ]
    ],
    "group": "executable",

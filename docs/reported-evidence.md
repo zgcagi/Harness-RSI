@@ -6,14 +6,14 @@ Evidence for Selection, Activation, Attribution, and Improvement in each method�
 
 ## Summary
 
-The two update-target branches contain 95 methods; 2 report no empirical evaluation. The counts below cover the other 93 reports, using one primary comparison per report for all four claims.
+The two update-target branches contain 96 methods; 2 report no empirical evaluation. The counts below cover the other 94 reports, using one primary comparison per report for all four claims.
 
 | Claim | ✅ Met | ◐ Partial | — Not met |
 |---|---:|---:|---:|
-| Selection | 43 | 16 | 34 |
-| Activation | 8 | 85 | 0 |
-| Attribution | 10 | 82 | 1 |
-| Improvement | 53 | 18 | 22 |
+| Selection | 44 | 16 | 34 |
+| Activation | 8 | 86 | 0 |
+| Attribution | 10 | 83 | 1 |
+| Improvement | 54 | 18 | 22 |
 
 Within one comparison, 7 reports meet three criteria and none meet all four criteria. Criteria and coverage differ across claims, so these counts do not rank method quality.
 
@@ -21,7 +21,7 @@ Number of criteria met within one primary comparison. A report with none may sti
 
 | 0 | 1 | 2 | 3 | 4 |
 |---:|---:|---:|---:|---:|
-| 26 | 27 | 33 | 7 | 0 |
+| 26 | 27 | 34 | 7 | 0 |
 
 The most common profile meets the Selection and task-distance criteria, with partial Activation and Attribution. Activation can rest on one confirmed scored-run case, with coverage recorded separately. Improvement grades task distance alone. Four-of-four is not a universal requirement for a final-state comparison.
 
@@ -36,7 +36,7 @@ The most common profile meets the Selection and task-distance criteria, with par
 | Workflows & Topologies | 12 | 4 | 1 | 2 | 8 |
 | Tools & Code Patches | 18 | 13 | 3 | 1 | 9 |
 | Repository & Runtime Logic | 16 | 4 | 0 | 1 | 8 |
-| Everything Is a Plugin | 4 | 2 | 1 | 0 | 1 |
+| Everything Is a Plugin | 5 | 3 | 1 | 0 | 2 |
 
 ## Verdicts
 
@@ -109,6 +109,7 @@ The most common profile meets the Selection and task-distance criteria, with par
 | [**MUSE-Autoskill**](https://arxiv.org/abs/2605.27366) <sub>`arXiv'26`</sub> | Interpreted · Procedural Skillbooks · [details](#lin2026muse) | — | ✅ | ◐ | — |
 | [**OPRO**](https://openreview.net/forum?id=Bb4VGOWELI) <sub>`ICLR'24`</sub> | Interpreted · Scalar-Score Search · [details](#yang2024large) | — | ◐ | ◐ | ✅ |
 | [**Ouroboros**](https://arxiv.org/abs/2608.08311) <sub>`arXiv'26`</sub> | Executable · Repository Revision · [details](#razzhigaev2026ouroboros) | ◐ | ◐ | ◐ | ◐ |
+| [**PluginRSI**](https://arxiv.org/abs/2609.32423) <sub>`arXiv'26`</sub> | Executable · Microkernel Platforms · [details](#shi2026pluginrsi) | ✅ | ◐ | ◐ | ✅ |
 | [**PolySkill**](https://arxiv.org/abs/2510.15863) <sub>`arXiv'25`</sub> | Executable · Callable Tool Synthesis · [details](#yu2025polyskill) | — | ◐ | ◐ | ◐ |
 | [**Promptbreeder**](https://proceedings.mlr.press/v235/fernando24a.html) <sub>`ICML'24`</sub> | Interpreted · Self-Referential Mutation · [details](#fernando2024promptbreeder) | ✅ | ◐ | ◐ | ✅ |
 | [**ProTeGi**](https://aclanthology.org/2023.emnlp-main.494/) <sub>`EMNLP'23`</sub> | Interpreted · Textual-Gradient Critique · [details](#pryzant2023automatic) | — | ◐ | ◐ | ✅ |
@@ -1364,6 +1365,25 @@ Cited artifact is the deepseek.com/en/harness/ product page (fetched live): feat
 **Attribution (Partly met).** variance is handled well - 5 trials on each of 89 tasks (445 trials), binomial SE about +/-1.7pp with the explicit statement that the audited score sits roughly two standard errors above the strongest baseline, plus McNemars test (p = 0.40) on 655 paired SWE-bench Pro tasks - but the headline arms differ in base model and effort (Ouroboros Opus 5 high vs Claude Code with Fable 5) and no per-task token, turn or cost envelope is reported for the campaigns; the model-matched rows are narrower (GPT-5.5 84.3 vs Codex CLI 83.1, inside the SE)
 
 **Improvement (Partly met).** partial distance - official third-party verifiers and a frozen seed, but the reporting benchmark families are also part of the experience stream the harness evolves from, and no held-out task partition is declared
+
+</details>
+
+<a id="shi2026pluginrsi"></a>
+
+<details>
+<summary><strong>PluginRSI</strong></summary>
+
+[Primary report](https://arxiv.org/abs/2609.32423)
+
+**Primary comparison.** SWE-bench Verified held-out resolve rate 69.0% vs Meta-Harness 63.0% (+6.0) and ReAct seed 47.0% (+22.0) with Kimi-K3 on the 100-task held-out split, alongside Terminal-Bench 2.1 73.3% vs 66.7% and 5-domain QA transfer 0.588 vs 0.568
+
+**Selection (Criterion met).** plugin mutations are screened on balanced 20-task solved/failed minibatches drawn from the 400-task held-in split and workflow recompositions are admitted solely on full 400-task held-in improvement over 15 iterations, while the 100-task held-out split is never accessed during proposal, library admission, or incumbent selection
+
+**Activation (Partly met).** accepted role, tool, skill, and memory plugins are wired into the recomposed workflow and executed in the scored runs by construction, with qualitative plugin diff inspections reported rather than per-task firing beacons on held-out rollouts
+
+**Attribution (Partly met).** comparisons isolate the harness optimization procedure under the same solver model, call cap, and cumulative solver-rollout budget curves against Meta-Harness, DGM, GEPA, and ReAct, plus a library-reuse ablation (69.0% vs 65.0%), though multi-seed dispersion intervals are not reported for the 100-task held-out resolve rate
+
+**Improvement (Criterion met).** evaluated on a disjoint 100-task SWE-bench Verified held-out split, five unseen QA transfer domains, and frozen cross-solver transfer across Kimi-K3, GPT-5.6 Terra, and GLM-5.2
 
 </details>
 
