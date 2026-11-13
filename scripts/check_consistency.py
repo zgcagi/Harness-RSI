@@ -118,6 +118,9 @@ def check_parity(problems):
 
 
 def check_files(problems):
+    def posix(path):
+        return os.path.normpath(path).replace(os.sep, "/")
+
     for path in READMES + DOCS:
         base = os.path.dirname(os.path.join(ROOT, path))
         for target in FILE_REF.findall(strip_code(read(path))):
@@ -128,10 +131,10 @@ def check_files(problems):
     for path in READMES + DOCS:
         base = os.path.dirname(path)
         for target in FILE_REF.findall(strip_code(read(path))):
-            linked.add(os.path.normpath(os.path.join(base, target)))
+            linked.add(posix(os.path.join(base, target)))
     for folder in ("assets", "docs"):
         for name in sorted(os.listdir(os.path.join(ROOT, folder))):
-            rel = os.path.join(folder, name)
+            rel = posix(os.path.join(folder, name))
             if rel in linked:
                 continue
             # Images are referenced as ![alt](path), which FILE_REF also catches.
@@ -219,7 +222,12 @@ def check_paper_snapshot(problems):
         artifact = Path(ROOT) / relative_path
         if not artifact.is_file():
             problems.append(f"Public manuscript artifact is missing: {relative_path}")
-        elif hashlib.sha256(artifact.read_bytes()).hexdigest() != expected_hash:
+            continue
+        data = artifact.read_bytes()
+        if artifact.suffix == ".bib":
+            # Git for Windows checks text out as CRLF by default; the snapshot records LF bytes.
+            data = data.replace(b"\r\n", b"\n")
+        if hashlib.sha256(data).hexdigest() != expected_hash:
             problems.append(f"Manuscript artifact differs from its snapshot: {relative_path}")
 
 
