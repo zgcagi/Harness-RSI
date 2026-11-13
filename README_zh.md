@@ -274,6 +274,8 @@ Self-evolution 指持续更新 harness 状态的过程；self-improvement 指通
 
 ### 2.3 Everything Is a Plugin
 
+固定证据审计之外的补充阅读：[PluginRSI](https://arxiv.org/abs/2609.32423) 在离线搜索中交替进行单个 plugin 的修改与 workflow 重组，将有效变体保留在共享库中；更新对象同时包括 role、skill 的指导文本与 tool、memory 的实现。 [[code]](https://github.com/syr-cn/PluginRSI)
+
 #### 接口约束下的 Hooks
 
 *通过明确接口与准入检查，将更新绑定到 hooks。*

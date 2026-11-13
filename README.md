@@ -272,6 +272,8 @@ These methods revise tools, component implementations, control programs, or plug
 
 ### 2.3 Everything Is a Plugin
 
+Additional reading outside the fixed evidence audit: [PluginRSI](https://arxiv.org/abs/2609.32423) alternates single-plugin mutation with workflow recomposition in an offline search, retaining useful variants in a shared library. Its updates span role and skill instructions as well as tool and memory implementations. [[code]](https://github.com/syr-cn/PluginRSI)
+
 #### Contract-Driven Hooks
 
 *Bind updates to hooks with explicit interfaces and admission checks.*
