@@ -661,6 +661,13 @@
     "branch": "Executable Update Targets",
     "sub": "Everything Is a Plugin",
     "mechanism": "Microkernel Platforms",
+    "name": "PluginRSI",
+    "key": "shi2026pluginrsi"
+  },
+  {
+    "branch": "Executable Update Targets",
+    "sub": "Everything Is a Plugin",
+    "mechanism": "Microkernel Platforms",
     "name": "Cordis / Spatiotemporal Composability",
     "key": "shi2026programming"
   },

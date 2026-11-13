@@ -286,6 +286,7 @@ These methods revise tools, component implementations, control programs, or plug
 - **DeepSeek Harness** `Product'26` — provides a Cordis-based runtime with declared dependencies, checkpointing, and replay; the product page reports no empirical self-evolution evaluation. [[page]](https://www.deepseek.com/harness/en/)
 - **Autogenesis** `arXiv'26` — a self-evolving agent protocol with an explicit propose–evaluate–commit cycle over lineage and versioning. [[paper]](https://arxiv.org/abs/2604.15034) [[code]](https://github.com/DVampire/Autogenesis)
 - **ModularRSI** `arXiv'26` — evolves modules behind a composer and admits updates through a reward-blind gate on externally curated tasks. [[paper]](https://arxiv.org/abs/2609.14857)
+- **PluginRSI** `arXiv'26` — mutates individual plugins on balanced minibatches, retains improving variants in a shared plugin library, and recomposes workflows across iterations. [[paper]](https://arxiv.org/abs/2609.32423)
 - **Cordis / Spatiotemporal Composability** `arXiv'26` — the formal calculus behind that kernel; self-evolving harnesses are stated as future work. [[paper]](https://arxiv.org/abs/2608.25512)
 
 <a id="theory"></a>
@@ -476,7 +477,7 @@ Successive updates require state and evaluator records, execution variation, inf
 
 <!-- evidence-summary:start -->
 
-Evidence for the four claims across 93 primary reported comparisons; 2 methods without empirical evaluation are excluded.
+Evidence for the four claims across 94 primary reported comparisons; 2 methods without empirical evaluation are excluded.
 
 [![Evidence by claim and overall coverage](assets/reported-evidence.png)](assets/reported-evidence.png)
 
