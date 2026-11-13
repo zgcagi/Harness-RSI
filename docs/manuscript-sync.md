@@ -1,6 +1,6 @@
 # Manuscript synchronization
 
-Latest update: [1 November 2026](#compositional-safety-update--1-november-2026). Earlier revisions are retained below for provenance.
+Latest update: [13 November 2026](#pluginrsi-discussion-update--13-november-2026). Earlier revisions are retained below for provenance.
 
 ## Initial synchronization — 17 October 2026
 
@@ -54,3 +54,16 @@ Added [Compositional Safety Failures in Harness Evolution](https://arxiv.org/abs
 Both source commits were pushed to Overleaf and verified against its remote main branches. Distributed PDFs and bibliographies are copied from the same locally verified revisions. Both PDFs compile without unresolved references or overfull boxes, retain their page counts, and have been visually checked at the changed passages and bibliography entries. Existing full-report font substitution and caption/hypcap warnings remain; Overleaf cloud compilation and external publication PDFs have not been updated or verified by this synchronization.
 
 This targeted citation update adds no audit verdicts and changes neither the 95-method scope nor the 93 scored comparisons. The audit date remains 10 October 2026 and the literature cutoff remains 8 October 2026.
+
+## PluginRSI discussion update — 13 November 2026
+
+Added [PluginRSI](https://arxiv.org/abs/2609.32423) to the full report's §4.3 Everything Is a Plugin and §9.3 Synthesis and Reuse of Harness Plugins, and to the short paper's §3.3 Everything Is a Plugin. The discussion distinguishes interpreted instructions from executable implementations and describes library reuse as support for further optimization. The bilingual reading lists link to the [official implementation](https://github.com/syr-cn/PluginRSI).
+
+| Artifact | Source commit | Local verification build |
+|---|---|---|
+| [Full report](../paper/harness-self-evolution.pdf) | `681687fc24502a2fab84ef1a450c597202ef7666` | 66 pages, 265 bibliography entries |
+| [Short paper](../paper/self-evolving-agent-harness.pdf) | `f7a748e946518077947d8ee895949ca98de981cc` | 18 pages, 88 bibliography entries |
+
+Both source commits were pushed to Overleaf and checked against its remote main branches. The distributed PDFs are the previously compiled and visually checked builds from these commits; their hashes were verified before publication. Bibliographies are copied from the same revisions. The taxonomy and evaluation-controls excerpts were refreshed only to align citation numbering with the full report. Builds have no unresolved references or overfull boxes; existing full-report font substitution and caption/hypcap warnings remain. Overleaf cloud compilation has not been verified, and the external arXiv and OpenReview PDFs were not updated.
+
+The audit records, verdicts, statistical figures, 95-method scope, and 93 scored comparisons remain unchanged. This discussion-only addition does not change the audit date (10 October 2026) or literature cutoff (8 October 2026).

@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-01",
-  "description": "Both Overleaf manuscript revisions include the compositional-safety reference. Distributed PDFs and bibliographies match the recorded source commits; the reading list and snapshot dates are synchronized. The primary-method audit and its literature cutoff are unchanged.",
+  "date": "2026-11-13",
+  "description": "Targeted PluginRSI discussion added to both manuscripts, with the official code link in the bilingual reading lists. Distributed PDFs and bibliographies match the Overleaf source commits. The primary-method audit, verdicts, statistics, and literature cutoff are unchanged.",
   "sha256": {
     "00README.json": "a37c4aec3b2991f6f18573df5207929066dff6250deb991ffa8130ebd759d1cb",
     "assets/logo-zgca-ustc.pdf": "3ca78b87e368c8b596ba5aa4fc5444c0557a9cc6df550339cbfe44ea9b63f92d",
@@ -15,7 +15,7 @@
     "figure/fig07_harness_applications.pdf": "7472e490d206728e5c65f3cac61c51991ae3835c5b38591b400762ecb033f53d",
     "figure/fig08_harness_social_impact.pdf": "9d408dd928e9ee9fdade48e559c35aec4a925116b889f15871cdb19c9bab6494",
     "main.tex": "8ac5653bb757fb93389950ad4ad35770beb6773998a4ec943f4c9e09ef73b594",
-    "references.bib": "63904f61243229839974cc4f558bf9239b3bc8b1583d508204e373948a2249ec",
+    "references.bib": "27debd2d0e983f3e60e8d31d261fd7d30ad12262d54361aff6826c55fdaa661d",
     "scripts/aggregate_claim_audit.py": "337aca074dc0c9b050b3cbaec526a611046781b0fa356d1733afaa58f7880101",
     "scripts/make_claim_audit_table.py": "1bcbb5299b13d8389f10ea1d78a31367dc0ef7ada034b7f8040a147db25c1cb8",
     "scripts/make_growth_inset.py": "4fc2363432d960e43e14cb3e897390fb885c6a57b12bf38ddbb63f35ceac81b4",
@@ -24,46 +24,46 @@
     "sections/01_intro.tex": "f94b959262b97a9d6cc60782fa63311332c3a65eb99aafba43dc98e4f0431c43",
     "sections/02_definition.tex": "355c4f7c1e7d7dadbfd40e327b7d955635e21b1b48323f954e10aa0a60f4d7ad",
     "sections/03_interpreted_targets.tex": "c2036f17ad8c50b5c760490493783b6f46d7a403d2ef22535bff8b74b76d4488",
-    "sections/04_executable_targets.tex": "2570648d3700b737250c31ba62e5e8cf021d92fc2a0665a9c8cc968f6e80eb6f",
+    "sections/04_executable_targets.tex": "fa563eba9ef5652b6366d347dff71bb356fb779363ac4fac570fc1ea53b51b55",
     "sections/05_theory.tex": "a3aec854327cff9bd71f32bc62e53c2119319d0e093f2c1054f7e91f321cf1e0",
     "sections/06_evaluation.tex": "2864d6a3d3e85187dacb29c34bde841798562ed37be5ac37f2e35ae359352f92",
     "sections/06_evaluation_audit_table.tex": "76f3650343a7826dd193d4ec0923beb222f588ed8867d22f95431fed73e7bd53",
     "sections/07_applications.tex": "5284e0e277400379fd830140bf3256dde8c90620b1334e7dc58d94f97b67e286",
     "sections/08_societal.tex": "44bc8578df33da48e5e727d639f6c2679f0fc176bff26fc5e4ce62d886dcde7f",
-    "sections/09_future.tex": "fd274710961c7f452c88ec9c41eb57c2a64c6096501aa510f941520825dd3bc0",
+    "sections/09_future.tex": "bbc3fb329a6cc6da698126a53abb88ba1d35743d823392ec675ec752e89fe504",
     "sections/10_conclusion.tex": "854c5bdc41c6c729a95dfbe06f9576f68260f9a391dc15a45b4daa89a5fd8004",
-    "main.pdf": "6c5944265eb4522e4c577446aa7165bda86ef1fcaee81692f1d0e061d5b56fa5"
+    "main.pdf": "41b933acba2d568a73eb6c041270e386bce6ec67bdc8a69767a4ed65eaf58781"
   },
   "manuscript_base_commit": "d1948d2714e0eabc9076d159d1d5b4c71343500e",
-  "manuscript_commit": "10c71251f211457a7d6ea2d5c19c7f6f3501191d",
+  "manuscript_commit": "681687fc24502a2fab84ef1a450c597202ef7666",
   "paper_pdf": "paper/harness-self-evolution.pdf",
   "audit_date": "2026-10-10",
   "literature_cutoff": "2026-10-08",
   "openreview_pdf": "https://openreview.net/pdf?id=m5jsFGXUM2",
   "build": {
     "origin": "local latexmk verification build",
-    "updated_on": "2026-11-01",
+    "updated_on": "2026-11-13",
     "pages": 66,
-    "bibliography_entries": 264,
+    "bibliography_entries": 265,
     "source_commit_verified": true,
     "cloud_build_verified": false
   },
   "short_paper": {
-    "manuscript_commit": "cc57cd278cf6962a18fa88b96d7500c6095c3c02",
+    "manuscript_commit": "f7a748e946518077947d8ee895949ca98de981cc",
     "paper_pdf": "paper/self-evolving-agent-harness.pdf",
     "arxiv_pdf": "https://arxiv.org/pdf/2610.18813",
     "pages": 18,
-    "bibliography_entries": 87,
+    "bibliography_entries": 88,
     "sha256": {
       "main.tex": "f240de5f4a5e9ac0a7a7ab7c0c228ef805044adbed0d647c33f0f15308f0906d",
-      "main.pdf": "711c63a79fa3784f1e04451c0d8aaa4bf260eb53713ef7d25e3ff8593e94b04a",
-      "references.bib": "e96d3640afa16d444157642fc68b120a30ba0188499ffedfeae68f347920f5a4",
-      "sections/03_executable_targets.tex": "4cedb09bfa3673ae9e77eebb655bb7bbab9a62fb58b0c865022c49f196946f38",
+      "main.pdf": "511a583f5d7f4d95caa727c4b5fe53d6cc4295c2c8bd2a8c129d70fbdf08a9b8",
+      "references.bib": "2921925e32c239528cd918c2e19928a3dcabef2cbc3baa1bf3e9dfc78bed03cf",
+      "sections/03_executable_targets.tex": "55f7bca84c2f767b7d84048851ba315e641374de69db51843ef9b186e9c256e9",
       "sections/06_future.tex": "0f096782611e1e593f12c7f6022094a74651cdcae4a74846ce0cb2b5b17ed8cd"
     },
     "build": {
       "origin": "local latexmk verification build",
-      "updated_on": "2026-11-01",
+      "updated_on": "2026-11-13",
       "source_commit_verified": true,
       "cloud_build_verified": false
     }
